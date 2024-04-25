@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://www.ucol.mx/favicon.ico" rel="shortcut icon">
+        <link href="https://www.ucol.mx/cms/apps/assets/css/apps.min.css"
+            rel="stylesheet">
+    </head>
+    <script>
+        SITE_TEMPLATE = 1;
+    </script>
+    <body>
+        <main class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12" id="content">
+                    <h1 class="text-xl">Login</h1>
+                    <form class="m-2" onsubmit="return validarFormulario()">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" />
+                        </div>
+                        <div class="form-group mt-4">
+                            <label for="password">Password</label>
+                            <input type="password" id="password"
+                                name="password" />
+                        </div>
+                        <button type="button" class="bg-slate-700 p-4 mt-2"
+                            id="attack1"
+                            onclick="attack()">Submit</button>
+                    </form>
+                    <div id="app"></div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+        function attack() {
+            // Obtener el valor del email
+            var email = document.getElementById("email").value;
+            
+            // Crear un elemento de parrafo
+            var app = document.querySelector('#app');
+            app.innerHTML = email;
+            
+        }
+
+    </script>
+    <script src="https://www.ucol.mx/cms/apps/assets/js/apps.min.js"></script>
+</html>
